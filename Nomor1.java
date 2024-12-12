@@ -5,12 +5,7 @@ public class Nomor1 {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         int n = input.nextInt();
-        /* Pekerjaan anda mulai dari sini */
         fizzbuzz(n);
-
-
-        /* Pekerjaan anda berakhir sini */
-
         input.close();
         System.out.println(Nomor1.class.getDeclaredMethods().length); 
     }

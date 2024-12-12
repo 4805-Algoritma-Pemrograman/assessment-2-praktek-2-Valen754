@@ -22,40 +22,39 @@ public class Nomor2 {
             if (jawaban.equalsIgnoreCase("N")) {
                 break;
             }
-            int totalHarga = hitungTotalHarga(hargaBelanja);
-            int voucherBelanja = hitungVoucherBelanja(totalHarga);
-
-            System.out.println("Total voucher belanja : " + voucherBelanja);
-            System.out.println("Total yang harus dibayar : " + totalHarga);
         }
 
+        int[] totalHarga = new int[1];
+        hitungTotalHarga(hargaBelanja, totalHarga);
 
+        int[] voucherBelanja = new int[1];
+        hitungVoucherBelanja(totalHarga[0], voucherBelanja);
 
-
+        System.out.println("Total voucher belanja : " + voucherBelanja[0]);
+        System.out.println("Total yang harus dibayar : " + totalHarga[0]);
 
         System.out.println(Nomor2.class.getDeclaredMethods().length); 
         input.close();
     }
 
-    public static int hitungTotalHarga(ArrayList<Integer> hargaBelanja) {
-        int totalHarga = 0;
+    public static void hitungTotalHarga(ArrayList<Integer> hargaBelanja, int[] totalHarga) {
+        totalHarga[0] = 0;
         for (int harga : hargaBelanja) {
-            totalHarga += harga;
+            totalHarga[0] += harga;
         }
-        return totalHarga;
     }
 
-    public static int hitungVoucherBelanja(int totalHarga) {
+    public static void hitungVoucherBelanja(int totalHarga, int[] voucherBelanja) {
         if (totalHarga < 200000) {
-            return 0;
+            voucherBelanja[0] = 0;
         } else if (totalHarga >= 200000 && totalHarga <= 500000) {
-            return 50000;
+            voucherBelanja[0] = 50000;
         } else if (totalHarga > 500000 && totalHarga <= 750000) {
-            return 100000;
+            voucherBelanja[0] = 100000;
         } else if (totalHarga > 750000 && totalHarga <= 1000000) {
-            return 150000;
+            voucherBelanja[0] = 150000;
         } else {
-            return 200000;
+            voucherBelanja[0] = 200000;
         }
     }
 }
