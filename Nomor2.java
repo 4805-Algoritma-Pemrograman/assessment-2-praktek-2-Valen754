@@ -27,8 +27,8 @@ public class Nomor2 {
         int totalHarga = hitungTotalHarga(hargaBelanja);
         int voucherBelanja = hitungVoucherBelanja(totalHarga);
 
-        System.out.println("Total voucher belanja = " + voucherBelanja);
-        System.out.println("Total yang harus dibayar = " + totalHarga);
+        System.out.println("Total voucher belanja : " + voucherBelanja);
+        System.out.println("Total yang harus dibayar : " + totalHarga);
 
         System.out.println(Nomor2.class.getDeclaredMethods().length); 
         input.close();
