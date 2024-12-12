@@ -23,11 +23,9 @@ public class Nomor2 {
                 break;
             }
         }
-        String a = input.nextLine();
 
         int totalHarga = hitungTotalHarga(hargaBelanja);
         int voucherBelanja = hitungVoucherBelanja(totalHarga);
-
 
         System.out.println("Total voucher belanja : " + voucherBelanja);
         System.out.println("Total yang harus dibayar : " + totalHarga);
